@@ -41,7 +41,7 @@
     <!-- 配置Spring Boot Starter JDBC项目的依赖关系-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>apring-boot-starter-jdbc</artifactId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
     </dependency>
     <!-- 配置Spring Boot Starter JDBC项目的依赖关系-->
 
@@ -52,13 +52,13 @@
     </dependency>
     <!-- 配置MySql数据库连接依赖关系-->
 
-    <!-- 配置Mabatis Spring Boot依赖关系-->
+    <!-- 配置Mabatis Spring Boot starter依赖关系-->
     <dependency>
       <groupId>org.mybatis.spring.boot</groupId>
       <artifactId>mybatis-spring-boot-starter</artifactId>
       <version>${mybatis-spring-boot-starter.version}</version>
     </dependency>
-    <!-- 配置Mabatis Spring Boot依赖关系-->
+    <!-- 配置Mabatis Spring Boot starter依赖关系-->
 
     <!-- 这配置数据库连接池Druid Spring Boot依赖关系-->
     <dependency>
@@ -67,6 +67,13 @@
        <version>${druid-spring-boot-starter}</version>
     </dependency>
     <!-- 这配置数据库连接池Druid Spring Boot依赖关系-->
+
+    <!-- 配置Spring Bot Starter Redis 依赖关系-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <!-- 配置Spring Bot Starter Redis 依赖关系-->
 
     <dependency>
       <groupId>junit</groupId>

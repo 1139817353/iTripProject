@@ -35,6 +35,36 @@
     </dependency>
     <!-- 配置springCloud Eureka Client依赖关系-->
 
+    <!-- 配置Spring Cloud OpenFeign 依赖关系-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <!-- 配置Spring Cloud OpenFeign 依赖关系-->
+
+    <!-- 配置Spring boot starter mail依赖关系-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-mail</artifactId>
+    </dependency>
+    <!-- 配置Spring boot starter mail依赖关系-->
+
+    <!--配置容联云所需要的组件依赖关系-->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.0.3</version>
+    </dependency>
+    <!--配置容联云所需要的组件依赖关系-->
+
+    <!-- 配置JWT 所需要的依赖关系-->
+    <dependency>
+      <groupId>com.auth0</groupId>
+      <artifactId>java-jwt</artifactId>
+      <version>3.10.0</version>
+    </dependency>
+    <!-- 配置JWT 所需要的依赖关系-->
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
