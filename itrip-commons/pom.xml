@@ -65,6 +65,14 @@
     </dependency>
     <!-- 配置JWT 所需要的依赖关系-->
 
+    <!--配置容联云所需要的依赖关系-->
+    <dependency>
+      <groupId>com.cloopen</groupId>
+      <artifactId>ccp_rest_sdk</artifactId>
+      <version>2.7</version>
+    </dependency>
+    <!--配置容联云所需要的依赖关系-->
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
