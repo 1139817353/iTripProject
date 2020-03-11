@@ -1,0 +1,10 @@
+cn\ekgc\itrip\transport\UserTransport.class
+cn\ekgc\itrip\util\constant\SystemConstant.class
+cn\ekgc\itrip\util\MD5Util.class
+cn\ekgc\itrip\util\RegValidationUtil.class
+cn\ekgc\itrip\util\JWTUtil.class
+cn\ekgc\itrip\pojo\entity\User.class
+cn\ekgc\itrip\pojo\vo\UserVO.class
+cn\ekgc\itrip\util\MailSenderUtil.class
+cn\ekgc\itrip\base\controller\BaseController.class
+cn\ekgc\itrip\base\enums\UserActivatedEnum.class

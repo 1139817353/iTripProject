@@ -1,0 +1,15 @@
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\constant\SystemConstant.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\JWTUtil.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\ActiveCodeUtil.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\RegValidationUtil.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\MailSenderUtil.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\MD5Util.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\constant\SmsContant.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\pojo\vo\UserVO.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\base\pojo\vo\ResponseDto.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\util\SmsSenderUtil.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\base\enums\UserActivatedEnum.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\base\controller\BaseController.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\pojo\entity\User.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\base\enums\UserTypeEnum.java
+E:\Myproject\iTripBackendProject\itrip-commons\src\main\java\cn\ekgc\itrip\transport\UserTransport.java
