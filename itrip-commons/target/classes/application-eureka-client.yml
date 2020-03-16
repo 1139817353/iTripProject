@@ -1,3 +1,7 @@
+### 将bean的key允许重名，实现多处接口与之对应
+spring:
+  main:
+    allow-bean-definition-overriding: true
 ### 配置 Eureka注册中心位置
 eureka:
   client:

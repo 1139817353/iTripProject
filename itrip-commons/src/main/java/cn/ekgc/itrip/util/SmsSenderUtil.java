@@ -1,5 +1,6 @@
 package cn.ekgc.itrip.util;
 
+
 import cn.ekgc.itrip.util.constant.SmsContant;
 import org.springframework.stereotype.Component;
 
@@ -7,12 +8,14 @@ import java.util.HashMap;
 import java.util.Set;
 
 /**
- * <b>短信发送工具类</b>
+ * <b>短信息发送工具类</b>
  */
 @Component("smsSenderUtil")
 public class SmsSenderUtil {
-
-	public boolean sendSms(String userCode,String activeCode)throws Exception{
+	/**
+	 * <b>根据用户手机号码发送短信验证码</b>
+	 */
+	public boolean sendSms(String userCode , String activeCode) throws Exception{
 		HashMap<String, Object> result = null;
 
 		CCPRestSDK restAPI = new CCPRestSDK();
@@ -38,5 +41,4 @@ public class SmsSenderUtil {
 		}
 		return false;
 	}
-
 }

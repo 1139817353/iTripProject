@@ -26,11 +26,12 @@ public class JWTUtil {
        //创建JWTCreator.Builder对象，用于创建Token
 		JWTCreator.Builder builder = JWT.create();
 		//创建一个map集合用于存储JWT的头部信息
-		Map<String,String> header = new HashMap<String,String>();
+		Map<String,Object> header = new HashMap<String,Object>();
 		//第一个设定加密算法
 		header.put("alg", "HS256");
 		header.put("typ", "JWT");
 
+		builder.withHeader(header);
 		//设置有效载荷
 		//key-value
 		builder.withClaim("id", id);

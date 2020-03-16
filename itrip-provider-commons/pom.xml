@@ -75,6 +75,16 @@
     </dependency>
     <!-- 配置Spring Bot Starter Redis 依赖关系-->
 
+    <!--配置 PageHelper Spring boot Starter 依赖关系-->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper-spring-boot-starter</artifactId>
+      <version>1.2.13</version>
+    </dependency>
+    <!--配置 PageHelper Spring boot Starter 依赖关系-->
+
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

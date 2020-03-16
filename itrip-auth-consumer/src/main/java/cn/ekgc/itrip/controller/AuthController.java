@@ -9,7 +9,6 @@ import cn.ekgc.itrip.transport.UserTransport;
 import cn.ekgc.itrip.util.JWTUtil;
 import cn.ekgc.itrip.util.MD5Util;
 import cn.ekgc.itrip.util.RegValidationUtil;
-import org.omg.PortableInterceptor.USER_EXCEPTION;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
