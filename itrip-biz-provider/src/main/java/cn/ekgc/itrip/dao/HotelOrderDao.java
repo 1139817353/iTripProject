@@ -1,7 +1,6 @@
 package cn.ekgc.itrip.dao;
 
-import cn.ekgc.itrip.pojo.entity.Hotel;
-import cn.ekgc.itrip.pojo.entity.HotelOrder;
+import cn.ekgc.itrip.pojo.vo.RoomStoreVO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,4 +18,12 @@ public interface HotelOrderDao {
 	 * @throws Exception
 	 */
    Integer findOrderRoomCountByQuery(Map<String,Object> queryMap) throws Exception;
+
+	/**
+	 * <b>查询房间费用</b>
+	 * @param roomStoreVO
+	 * @return
+	 * @throws Exception
+	 */
+	List<RoomStoreVO> findgetPreOrderInfo(RoomStoreVO roomStoreVO)throws Exception;
 }

@@ -14,11 +14,11 @@ import java.util.Map;
 public interface HotelRoomDao {
 	/**
 	 * <b>根据嘻哈寻条件查询列表信息</b>
-	 * @param query
+	 * @param room
 	 * @return
 	 * @throws Exception
 	 */
-	public List<HotelRoom> findListByQuery(HotelRoom query) throws Exception;
+	public List<HotelRoom> findListByQuery(HotelRoom room) throws Exception;
 
 	/**
 	 * <b>根据查询条件获得此时临时库存数量</b>

@@ -1,17 +1,17 @@
 package cn.ekgc.itrip.controller;
 
 import cn.ekgc.itrip.base.controller.BaseController;
+import cn.ekgc.itrip.base.enums.ImageTypeEnum;
 import cn.ekgc.itrip.base.pojo.vo.ResponseDto;
+import cn.ekgc.itrip.pojo.entity.ItripImage;
 import cn.ekgc.itrip.pojo.entity.LabelDic;
 import cn.ekgc.itrip.pojo.vo.HotelRoom;
 import cn.ekgc.itrip.pojo.vo.SearchHotelRoomVO;
 import cn.ekgc.itrip.transport.HotelRoomTransport;
+import cn.ekgc.itrip.transport.ItripImageTransport;
 import cn.ekgc.itrip.transport.LabelDicTransport;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,8 @@ public class HotelRoomController extends BaseController {
 	private LabelDicTransport  labelDicTransport;
 	@Autowired
 	private HotelRoomTransport hotelRoomTransport;
+	@Autowired
+	private ItripImageTransport itripImageTransport;
 	/**
 	 * <b>查询酒店列表-此刻可以预定的房间列表</b>
 	 * @param searchHotelRoomVO
@@ -60,4 +62,22 @@ public class HotelRoomController extends BaseController {
 	     query.setParentId(1L);
 	     return ResponseDto.success(labelDicTransport.getListByQuery(query));
      }
+	/**
+	 * <b>根据targetId查询酒店图片（type=1）</b>
+	 * @param targetId
+	 * @return
+	 * @throws Exception
+	 */
+	@GetMapping(value = "/getimg/{targetId}")
+	public ResponseDto<Object> getImgForHotel(@PathVariable("targetId") Long targetId)throws Exception{
+		ItripImage query = new ItripImage();
+		query.setTargetId(targetId);
+		//强制类型转换成String类型
+		query.setType(String.valueOf(ImageTypeEnum.IMAGE_TYPE_ROOM.getCode()));
+
+		List<ItripImage> itripImageList = itripImageTransport.getItripImageListByQuery(query);
+
+
+		return ResponseDto.success(itripImageList);
+	}
 }

@@ -2,6 +2,7 @@ package cn.ekgc.itrip.util;
 
 
 import cn.ekgc.itrip.util.constant.SmsContant;
+import com.cloopen.rest.sdk.CCPRestSmsSDK;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -18,7 +19,7 @@ public class SmsSenderUtil {
 	public boolean sendSms(String userCode , String activeCode) throws Exception{
 		HashMap<String, Object> result = null;
 
-		CCPRestSDK restAPI = new CCPRestSDK();
+		CCPRestSmsSDK restAPI = new CCPRestSmsSDK();
 		restAPI.init(SmsContant.SMS_ADDRESS, SmsContant.SMS_PORT);// 初始化服务器地址和端口，格式如下，服务器地址不需要写https://
 		restAPI.setAccount(SmsContant.SMS_ACCOUNTSID, SmsContant.SMS_ACCOUNTTOKEN);// 初始化主帐号和主帐号TOKEN
 		restAPI.setAppId(SmsContant.SMS_APPIO);// 初始化应用ID

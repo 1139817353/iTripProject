@@ -6,6 +6,7 @@ package cn.ekgc.itrip.service.impl;
 		import cn.ekgc.itrip.util.ActiveCodeUtil;
 		import cn.ekgc.itrip.util.MailSenderUtil;
 		import cn.ekgc.itrip.util.RegValidationUtil;
+		import cn.ekgc.itrip.util.SmsSenderUtil;
 		import org.springframework.beans.factory.annotation.Autowired;
 		import org.springframework.data.redis.core.StringRedisTemplate;
 		import org.springframework.stereotype.Service;

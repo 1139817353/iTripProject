@@ -1,22 +1,23 @@
 package cn.ekgc.itrip.controller;
 
 import cn.ekgc.itrip.base.enums.AreaHot;
+import cn.ekgc.itrip.base.enums.ImageTypeEnum;
 import cn.ekgc.itrip.base.pojo.vo.ResponseDto;
 import cn.ekgc.itrip.pojo.entity.AreaDic;
 import cn.ekgc.itrip.pojo.entity.Hotel;
+import cn.ekgc.itrip.pojo.entity.ItripImage;
 import cn.ekgc.itrip.pojo.entity.LabelDic;
 import cn.ekgc.itrip.pojo.vo.SearchDetailsHotelVO;
 import cn.ekgc.itrip.transport.AreaDicTransport;
 import cn.ekgc.itrip.transport.HotelTransport;
+import cn.ekgc.itrip.transport.ItripImageTransport;
 import cn.ekgc.itrip.transport.LabelDicTransport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sun.font.Decoration;
 
-import javax.management.Query;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +33,8 @@ public class HotelController {
 	private LabelDicTransport labelDicTransport;
      @Autowired
 	private HotelTransport hotelTransport;
+     @Autowired
+     private ItripImageTransport itripImageTransport;
 	 /**
 	 * <b>查询热门城市</b>
 	 * @param isChina
@@ -116,5 +119,26 @@ public class HotelController {
 
 		Hotel hotel = hotelTransport.getHotelById(hotelId);
 		return ResponseDto.success(hotel.getHotelPolicy());
+	}
+
+	/**
+	 * <b>根据targetId查询酒店图片（type=0）</b>
+	 * @param targetId
+	 * @return
+	 * @throws Exception
+	 */
+	@GetMapping(value = "/getimg/{targetId}")
+	public ResponseDto<Object> getImgForHotel(@PathVariable("targetId") Long targetId)throws Exception{
+		ItripImage query = new ItripImage();
+		query.setTargetId(targetId);
+		//强制类型转换成String类型
+		query.setType(String.valueOf(ImageTypeEnum.IMAGE_TYPE_HOTEL.getCode()));
+
+		List<ItripImage> itripImageList = itripImageTransport.getItripImageListByQuery(query);
+
+		if (itripImageList.size() > 0){
+			return ResponseDto.success(itripImageList.get(0));
+		}
+		return ResponseDto.success(new ItripImage());
 	}
 }
