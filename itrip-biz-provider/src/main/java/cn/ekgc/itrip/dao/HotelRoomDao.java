@@ -13,7 +13,7 @@ import java.util.Map;
 @Repository
 public interface HotelRoomDao {
 	/**
-	 * <b>根据嘻哈寻条件查询列表信息</b>
+	 * <b>根据查询条件查询列表信息</b>
 	 * @param room
 	 * @return
 	 * @throws Exception

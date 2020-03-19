@@ -17,32 +17,5 @@
           iho.orderStatus in (0,2)
 	</select>
 
-	<select id="findgetPreOrderInfo" parameterType="RoomStoreVO" resultMap="orderMap">
-     SELECT
-	   ih.id,
-	   ih.hotelId,
-	   ih.roomTitle,
-	   ih.roomPrice
-    FROM
-	     itrip_hotel_room ih
-	<where>
-		<trim suffixOverrides="and">
-			<if test="id != null">ih.id=#{roomId} and </if>
-			<if test="hotelId != null">ih.hotelId=#{hotelId} and </if>
-			<if test="roomTitle != null">ih.roomTitle=#{hotelName} and </if>
-		</trim>
-	</where>
-		WHERE
-		    hotelId=1;
-	</select>
-	<resultMap id="orderMap" type="RoomStoreVO">
-		<id property="roomId" javaType="java.lang.Long" column="id"/>
-		<id property="hotelId" javaType="java.lang.Long" column="hotelId"/>
-        <result property="hotelName" javaType="java.lang.String" column="roomTitle"/>
-		<result property="price" javaType="java.lang.Double" column="roomPrice"/>
-		<result property="creationDate" javaType="java.util.Date" column="creationDate"/>
-		<result property="createdBy" javaType="java.lang.Long" column="createdBy"/>
-		<result property="modifyDate" javaType="java.util.Date" column="modifyDate"/>
-		<result property="modifiedBy" javaType="java.lang.Long" column="modifiedBy"/>
-	</resultMap>
+
 </mapper>

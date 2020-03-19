@@ -40,6 +40,7 @@
 	select
 		ihts.store
 	from
+		itrip_hotel_temp_store ihts
 	 <where>
 		 <trim suffixOverrides="and">
 			 <if test="roomId != null">ihts.roomId=#{roomId} and </if>
